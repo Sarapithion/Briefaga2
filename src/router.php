@@ -47,8 +47,11 @@ $routeComposee = Routing::routeComposee($route);
   
 
 $UserController = new UserController;
-
 switch($route){
+      case HOME_URL:
+      case "/sara/Briefaga2/":
+            require __DIR__ . "/Views/connexion.php";
+            break;
       case HOME_URL . "connexion":
             if (isset($_SESSION['connecté'])){
       header('location: ' . HOME_URL . 'dashboard');
@@ -60,8 +63,10 @@ switch($route){
           $email = htmlspecialchars(strip_tags(trim($user["email"])));
           $password = htmlspecialchars(strip_tags(trim($user["password"])));
           $reponse =   $UserController->login($email, $password);
-    }
-    break;
+          echo "$reponse";
+    die;
+}
+    
 }
 
   

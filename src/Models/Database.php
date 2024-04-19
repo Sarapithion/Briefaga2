@@ -49,7 +49,7 @@ final class Database
                 $i = 1;
                 $migrationExistante = TRUE;
                 while ($migrationExistante === TRUE) {
-                    $migration = __DIR__ . "/../../Migration/BDD-FESTIVAL$i.sql";
+                    $migration = __DIR__ . "/../../Migration/BDD-1.sql";
                     if (file_exists($migration)) {
                         $sql = file_get_contents($migration);
                         $this->DB->query($sql);
@@ -70,7 +70,7 @@ final class Database
     }
 
     /**
-     * Vérifie si la table Films existe déjà dans la BDD
+     
      * @return bool
      */
     private function testIfTableReservationExists(): bool

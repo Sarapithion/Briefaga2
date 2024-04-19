@@ -25,7 +25,8 @@ function signin() {
   fetch("http://gda/public/connexion", params)
     .then((res) => res.text())
     .then((data) => {
-              document.getElementById("loginData").innerHTML = "Vous êtes connecté";loginData.innerHTML = data.message + "<br> Vous allez etre redirigé";
+              document.getElementById("loginData").innerHTML = "Vous êtes connecté";
+              console.log(data);
       if (data.status === "success") {
         if (data.userRole == 5 || data.userRole == 6) {
         }
