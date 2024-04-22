@@ -18,7 +18,7 @@ define('DB_HOST', 'localhost');
 define('HOME_URL', '/public');
 define('DB_NAME', 'my_webapp__22');
 define('DB_USER', 'my_webapp__22');
-define('DB_PWD', 'lB5yM51jYQPrsjAXJRh2QOxPtJx11S');
+define('DB_PWD', ;
 define('PREFIXE', 'aga_');
 // Ne pas toucher :
 
